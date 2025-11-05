@@ -4,104 +4,170 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inderjot Singh Litt - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="navbar">
-        <div class="container">
-            <h1 class="logo">Portfolio<span class="dot">.</span></h1>
-            <nav class="nav-links">
-                <a href="#about" class="nav-item">About</a>
-                <a href="#projects" class="nav-item">Projects</a>
-                <a href="#education" class="nav-item">Education</a>
-                <a href="#contact" class="nav-item">Contact</a>
-                <a href="#resume" class="nav-item">Resume</a>
-            </nav>
-            <div class="social-icons">
-                <a href="YOUR_GITHUB_PROFILE_URL" target="_blank" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
-                <a href="YOUR_LINKEDIN_PROFILE_URL" target="_blank" aria-label="LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Portfolio.</div>
+            <div class="nav-links">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <a href="#resume" class="nav-link">Resume</a>
+            </div>
+            <div class="social-links">
+                <a href="https://github.com/yourusername" target="_blank" class="social-btn github-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                </a>
+                <a href="https://linkedin.com/in/yourusername" target="_blank" class="social-btn linkedin-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                </a>
             </div>
         </div>
-    </header>
+    </nav>
 
-    <main>
-        <section id="hero" class="hero-section">
-            <div class="container">
-                <div class="profile-picture-container">
-                    <img src="profile-placeholder.png" alt="Inderjot Singh Litt" class="profile-picture">
-                </div>
-                <h2>Inderjot Singh Litt</h2>
-                <p class="subtitle">Computer Science Student | Aspiring Developer</p>
-                <p class="about-textfff">Passionate about building innovative solutions and constantly learning new technologies.</p>
-                <a href="YOUR_RESUME_URL.pdf" target="_blank" class="btn btn-primary">Download Resume</a>
-            </div>
-        </section>
-
-        <section id="about" class="section-padding">
-            <div class="container">
-                <h3>About Me</h3>
-                <p>This is where you'll write a more detailed "About Me" section. Talk about your interests, your journey into computer science, what motivates you, and what kind of roles you're looking for. Make it personal and engaging!</p>
-                <p>Example: "I'm a final-year CS student with a strong foundation in data structures and algorithms, and practical experience in full-stack development. I enjoy tackling complex problems and am always eager to collaborate on impactful projects."</p>
-            </div>
-        </section>
-
-        <section id="projects" class="section-padding section-alt-background">
-            <div class="container">
-                <h3>My Projects</h3>
-                <div class="project-grid">
-                    <div class="project-card">
-                        <img src="https://via.placeholder.com/300x200?text=Project+1" alt="Project 1 Screenshot">
-                        <h4>Project Title One</h4>
-                        <p>A brief description of Project One, highlighting the problem it solves and your contribution. Used technologies like React, Node.js, and MongoDB.</p>
-                        <div class="project-links">
-                            <a href="YOUR_PROJECT_DEMO_URL" target="_blank" class="btn btn-secondary">Live Demo</a>
-                            <a href="YOUR_PROJECT_GITHUB_URL" target="_blank" class="btn btn-secondary">Source Code</a>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <img src="https://via.placeholder.com/300x200?text=Project+2" alt="Project 2 Screenshot">
-                        <h4>Project Title Two</h4>
-                        <p>Description of Project Two. Focus on the technologies used like Python, Django, and PostgreSQL, and the impact of the project.</p>
-                        <div class="project-links">
-                            <a href="YOUR_PROJECT_DEMO_URL" target="_blank" class="btn btn-secondary">Live Demo</a>
-                            <a href="YOUR_PROJECT_GITHUB_URL" target="_blank" class="btn btn-secondary">Source Code</a>
-                        </div>
-                    </div>
-                    </div>
-            </div>
-        </section>
-
-        <section id="education" class="section-padding">
-            <div class="container">
-                <h3>Education & Qualifications</h3>
-                <div class="education-item">
-                    <h4>Bachelor of Science in Computer Science</h4>
-                    <p><strong>[Your University Name]</strong> | [City, State]</p>
-                    <p>Expected Graduation: [Month Year]</p>
-                    <ul>
-                        <li>Relevant Coursework: Data Structures & Algorithms, Operating Systems, Database Management, Machine Learning</li>
-                        <li>GPA: [Your GPA, optional]</li>
-                    </ul>
-                </div>
-                </div>
-        </section>
-
-        <section id="contact" class="section-padding section-alt-background">
-            <div class="container">
-                <h3>Get In Touch</h3>
-                <p>Feel free to reach out to me for collaborations, questions, or just to say hello!</p>
-                <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-                <p>You can also connect with me on <a href="YOUR_LINKEDIN_PROFILE_URL" target="_blank">LinkedIn</a>.</p>
-            </div>
-        </section>
-    </main>
-
-    <footer>
+    <!-- About Section -->
+    <section id="about" class="section about-section">
         <div class="container">
-            <p>&copy; 2023 Inderjot Singh Litt. All rights reserved.</p>
+            <div class="about-content">
+                <div class="profile-image-container">
+                    <img src="your-photo.jpg" alt="Inderjot Singh Litt" class="profile-image">
+                </div>
+                <h1 class="name">Inderjot Singh Litt</h1>
+                <p class="title">Computer Science Student & Developer</p>
+                <p class="bio">Passionate about creating innovative solutions through code. Experienced in full-stack development, machine learning, and cloud technologies. Always eager to learn and tackle new challenges.</p>
+                <button class="download-resume-btn" onclick="downloadResume()">Download Resume</button>
+            </div>
         </div>
-    </footer>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects-section">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="timeline">
+                <div class="timeline-line"></div>
+                
+                <div class="project-card" data-aos="fade-right">
+                    <div class="timeline-dot"></div>
+                    <div class="card-content">
+                        <h3 class="project-title">E-Commerce Platform</h3>
+                        <p class="project-description">Built a full-stack e-commerce platform with React, Node.js, and MongoDB. Features include user authentication, payment integration, and real-time inventory management.</p>
+                        <div class="project-image">
+                            <img src="project1.jpg" alt="E-Commerce Platform">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="fade-right">
+                    <div class="timeline-dot"></div>
+                    <div class="card-content">
+                        <h3 class="project-title">AI Chat Assistant</h3>
+                        <p class="project-description">Developed an intelligent chat assistant using Python and natural language processing. Integrated with multiple APIs to provide comprehensive responses to user queries.</p>
+                        <div class="project-image">
+                            <img src="project2.jpg" alt="AI Chat Assistant">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="fade-right">
+                    <div class="timeline-dot"></div>
+                    <div class="card-content">
+                        <h3 class="project-title">Weather Dashboard</h3>
+                        <p class="project-description">Created a responsive weather dashboard that displays real-time weather data and forecasts. Built with vanilla JavaScript and integrated with OpenWeather API.</p>
+                        <div class="project-image">
+                            <img src="project3.jpg" alt="Weather Dashboard">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section education-section">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="education-timeline">
+                <div class="education-item" data-aos="fade-left">
+                    <div class="year-circle">2021</div>
+                    <div class="education-content">
+                        <p>Started Bachelor's Degree<br>Computer Science</p>
+                    </div>
+                </div>
+                <div class="dotted-line"></div>
+                <div class="education-item" data-aos="fade-left" data-aos-delay="200">
+                    <div class="year-circle">2022</div>
+                    <div class="education-content">
+                        <p>Dean's List<br>Academic Excellence</p>
+                    </div>
+                </div>
+                <div class="dotted-line"></div>
+                <div class="education-item" data-aos="fade-left" data-aos-delay="400">
+                    <div class="year-circle">SOON<br><span class="year-sub">(2026)</span></div>
+                    <div class="education-content">
+                        <p>Expected Graduation<br>B.S. Computer Science</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="certifications-preview" data-aos="fade-up">
+                <h3>Certifications</h3>
+                <p>View my professional certifications and achievements</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="section certifications-section">
+        <div class="container">
+            <h2 class="section-title">Certifications</h2>
+            <div class="certifications-grid">
+                <div class="cert-card" data-aos="zoom-in">
+                    <h4>AWS Certified Cloud Practitioner</h4>
+                    <p>Amazon Web Services - 2023</p>
+                </div>
+                <div class="cert-card" data-aos="zoom-in" data-aos-delay="100">
+                    <h4>Google Data Analytics Certificate</h4>
+                    <p>Google - 2023</p>
+                </div>
+                <div class="cert-card" data-aos="zoom-in" data-aos-delay="200">
+                    <h4>Meta Front-End Developer</h4>
+                    <p>Meta - 2022</p>
+                </div>
+                <div class="cert-card" data-aos="zoom-in" data-aos-delay="300">
+                    <h4>Python for Data Science</h4>
+                    <p>IBM - 2022</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <div class="contact-content">
+                <h2 class="thanks-text" data-aos="fade-up">Thanks!!!!!</h2>
+                <div class="contact-info" data-aos="fade-up" data-aos-delay="200">
+                    <h3>Contact</h3>
+                    <p>Feel free to reach out for collaborations or just a friendly hello!</p>
+                    <div class="contact-links">
+                        <a href="mailto:your.email@example.com" class="contact-link">Email Me</a>
+                        <a href="https://linkedin.com/in/yourusername" class="contact-link">LinkedIn</a>
+                        <a href="https://github.com/yourusername" class="contact-link">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <script src="script.js"></script>
 </body>
