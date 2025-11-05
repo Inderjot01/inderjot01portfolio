@@ -1,0 +1,380 @@
+/* Basic Resets & Global Styles */
+:root {
+    --primary-bg: #1a1a1a; /* Dark background */
+    --secondary-bg: #2a2a2a; /* Slightly lighter for alternate sections */
+    --primary-text: #ffffff; /* White text */
+    --accent-color: #8aff8a; /* Green for "Computer...", "ABOUT ME TEXT" */
+    --link-color: #8aff8a; /* Green for links */
+    --dot-color: #ffcc00; /* Yellow for the dot in Portfolio. */
+    --profile-circle: #ffcc00; /* Yellow for the picture circle */
+    --button-bg: #8aff8a; /* Green button background */
+    --button-text: #1a1a1a; /* Dark text on green button */
+    --border-radius: 8px;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary-bg);
+    color: var(--primary-text);
+    line-height: 1.6;
+    scroll-behavior: smooth; /* For smooth scrolling */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: lighten(var(--link-color), 10%); /* Adjust hover color */
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--primary-bg);
+    padding: 20px 0;
+    border-bottom: 1px solid var(--secondary-bg);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin: 0;
+    color: var(--primary-text);
+}
+
+.logo .dot {
+    color: var(--dot-color);
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    margin: 0 auto; /* Center nav links */
+    flex-grow: 1; /* Allow nav links to take available space */
+    justify-content: center;
+}
+
+.nav-item {
+    color: var(--primary-text);
+    font-weight: 500;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+.nav-item:hover {
+    color: var(--accent-color);
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    font-size: 1.5em;
+    color: var(--primary-text);
+    background-color: var(--secondary-bg);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-bg);
+}
+
+/* Hero Section */
+.hero-section {
+    text-align: center;
+    padding: 80px 0 100px; /* More padding at bottom */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 80px); /* Adjust based on navbar height */
+}
+
+.profile-picture-container {
+    width: 200px; /* Size of the circle */
+    height: 200px;
+    background-color: var(--profile-circle);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    overflow: hidden; /* Ensure image stays within circle */
+}
+
+.profile-picture {
+    width: 100%; /* Make image fill the circle */
+    height: 100%;
+    object-fit: cover; /* Crop image to fit */
+    border-radius: 50%; /* Ensure image itself is circular if it wasn't already */
+}
+
+.hero-section h2 {
+    font-size: 2.8em;
+    margin-bottom: 10px;
+    color: var(--primary-text);
+}
+
+.hero-section .subtitle {
+    font-size: 1.3em;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+}
+
+.hero-section .about-text {
+    font-size: 1.1em;
+    color: var(--accent-color);
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: var(--border-radius);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: 2px solid var(--button-bg);
+}
+
+.btn-primary:hover {
+    background-color: darken(var(--button-bg), 10%); /* Adjust hover */
+    border-color: darken(var(--button-bg), 10%);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--accent-color);
+    border: 2px solid var(--accent-color);
+    padding: 8px 20px;
+    font-size: 0.9em;
+}
+
+.btn-secondary:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-bg);
+}
+
+/* General Section Styles */
+.section-padding {
+    padding: 80px 0;
+}
+
+.section-alt-background {
+    background-color: var(--secondary-bg);
+}
+
+h3 {
+    font-size: 2.2em;
+    text-align: center;
+    margin-bottom: 50px;
+    color: var(--primary-text);
+}
+
+/* Project Grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background-color: var(--primary-bg);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.project-card img {
+    max-width: 100%;
+    border-radius: var(--border-radius);
+    margin-bottom: 20px;
+}
+
+.project-card h4 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: var(--primary-text);
+}
+
+.project-card p {
+    font-size: 0.95em;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.project-links {
+    display: flex;
+    gap: 15px;
+    margin-top: auto; /* Push links to bottom of card */
+}
+
+/* Education Section */
+.education-item {
+    background-color: var(--secondary-bg);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    margin-bottom: 30px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.education-item h4 {
+    color: var(--accent-color);
+    margin-bottom: 10px;
+    font-size: 1.6em;
+}
+
+.education-item p {
+    margin-bottom: 8px;
+    color: #ccc;
+}
+
+.education-item ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin-top: 15px;
+    color: #ccc;
+}
+
+.education-item li {
+    margin-bottom: 5px;
+}
+
+/* Contact Section */
+.contact-section {
+    text-align: center;
+}
+
+.contact-section p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+.contact-section a {
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-bg);
+    text-align: center;
+    padding: 30px 0;
+    border-top: 1px solid var(--secondary-bg);
+    color: #aaa;
+    font-size: 0.9em;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 900px) {
+    .navbar .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .nav-links {
+        order: 2; /* Put nav links below logo and social */
+        width: 100%;
+        justify-content: center;
+        margin: 0;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+    .social-icons {
+        order: 1; /* Keep social icons near the top */
+        margin-left: auto;
+    }
+    .hero-section h2 {
+        font-size: 2.2em;
+    }
+    .hero-section .subtitle {
+        font-size: 1.1em;
+    }
+    .profile-picture-container {
+        width: 160px;
+        height: 160px;
+    }
+    h3 {
+        font-size: 1.8em;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar .container {
+        align-items: flex-start;
+    }
+    .nav-links {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    .social-icons {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    .hero-section {
+        padding: 60px 0;
+    }
+    .hero-section h2 {
+        font-size: 1.8em;
+    }
+    .hero-section .subtitle, .hero-section .about-text {
+        font-size: 1em;
+    }
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+    .project-grid {
+        grid-template-columns: 1fr; /* Stack projects vertically */
+    }
+    .section-padding {
+        padding: 60px 0;
+    }
+}
