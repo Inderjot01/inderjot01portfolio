@@ -96,8 +96,8 @@ function initMobileMenu() {
 
 function downloadResume() {
     var link = document.createElement('a');
-    link.href = 'Inderjot_Singh_Litt_Resume.pdf';
-    link.download = 'Inderjot_Singh_Litt_Resume.pdf';
+    link.href = 'Inderjot_Singh_Litt_CV.pdf';
+    link.download = 'Inderjot_Singh_Litt_CV.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
