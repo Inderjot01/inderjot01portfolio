@@ -6,6 +6,114 @@
     <title>Inderjot Singh Litt - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* ── About Me / Hobbies Section ── */
+        .aboutme-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .aboutme-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.06) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .aboutme-section .section-title {
+            margin-bottom: 16px;
+        }
+
+        .aboutme-intro {
+            max-width: 640px;
+            margin: 0 auto 48px;
+            text-align: center;
+            color: #a0a0b0;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        .hobbies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hobby-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 32px 24px;
+            text-align: center;
+            transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hobby-card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 16px;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.08), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+
+        .hobby-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(99, 102, 241, 0.3);
+            background: rgba(255, 255, 255, 0.06);
+        }
+
+        .hobby-card:hover::after {
+            opacity: 1;
+        }
+
+        .hobby-icon {
+            font-size: 2.4rem;
+            margin-bottom: 14px;
+            display: block;
+            filter: grayscale(0.15);
+        }
+
+        .hobby-card h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #e0e0ec;
+            margin: 0 0 8px;
+            letter-spacing: 0.02em;
+        }
+
+        .hobby-card p {
+            font-size: 0.82rem;
+            color: #8888a0;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 600px) {
+            .hobbies-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 14px;
+            }
+            .hobby-card {
+                padding: 24px 16px;
+            }
+            .hobby-icon {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar">
@@ -335,6 +443,42 @@
                         <p class="venture-role">Co-Founder & Technical Lead (CURRENTLY NO ACTIVE ROLE)</p>
                         <p class="venture-desc">Data annotation company specializing in computer vision labeling services for ML training pipelines.</p>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── About Me ── -->
+    <section class="section aboutme-section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <p class="aboutme-intro">When I'm not debugging models or writing code, you'll find me on a padel court, spotting planes, or hanging out with friends.</p>
+
+            <div class="hobbies-grid">
+                <div class="hobby-card">
+                    <span class="hobby-icon">🎾</span>
+                    <h4>Padel</h4>
+                    <p>My weekend getaway.</p>
+                </div>
+                <div class="hobby-card">
+                    <span class="hobby-icon">🐾</span>
+                    <h4>Animal Lover</h4>
+                    <p>Always stopping to befriend every dog.</p>
+                </div>
+                <div class="hobby-card">
+                    <span class="hobby-icon">✈️</span>
+                    <h4>Aviation</h4>
+                    <p>Flight sim enthusiast and plane spotter - fascinated by everything that flies.</p>
+                </div>
+                <div class="hobby-card">
+                    <span class="hobby-icon">🤝</span>
+                    <h4>Socialising</h4>
+                    <p>Energised by good conversations, meetups, and building connections.</p>
+                </div>
+                <div class="hobby-card">
+                    <span class="hobby-icon">🎵</span>
+                    <h4>Music</h4>
+                    <p>Always have something playing and discovering new genres and artists.</p>
                 </div>
             </div>
         </div>
